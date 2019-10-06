@@ -28,7 +28,7 @@ resource "digitalocean_droplet" "docker" {
   ]
 }
 
-resource "cloudflare_record" "droplet" {
+resource "cloudflare_record" "docker" {
   domain = "sikademo.com"
   name   = "docker"
   value  = "${digitalocean_droplet.docker.ipv4_address}"
